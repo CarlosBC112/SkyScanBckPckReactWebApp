@@ -1,0 +1,44 @@
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App {
+  text-align: center;
+
+  &__header {
+    padding: 2rem;
+    background-color: #00b2ff;
+    background-image: linear-gradient(90deg, #00b2ff 0%, #4f5bd5 100%);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Responsive padding for mobile */
+    @media (max-width: 600px) {
+      padding: 3rem;
+    }
+  }
+
+  &__header-inner {
+    @include container;
+  }
+
+  &__main {
+    padding: 4rem;
+
+    @include container;
+
+    /* Responsive padding for mobile */
+    @media (max-width: 600px) {
+      padding: 1rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+}
